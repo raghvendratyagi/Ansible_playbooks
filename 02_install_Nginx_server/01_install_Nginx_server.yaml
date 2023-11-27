@@ -1,0 +1,15 @@
+---
+-name: install and start nginx web server on all nodes
+ hosts: all
+ become: root
+ tasks:
+     -name: install nginx
+       apt:
+         name: nginx
+         state: present or Latest 
+     -name: Start nginx
+      service:
+          name: nginx
+          state: started
+---
+         

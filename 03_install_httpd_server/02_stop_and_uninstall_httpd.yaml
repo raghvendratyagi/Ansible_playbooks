@@ -1,0 +1,14 @@
+---
+-name: stop and uninstall httpd
+ hosts: all
+ become: root
+  tasks:
+    - name: stop httpd
+      service:
+          name: httpd
+          state: stopped
+    - name: uninstall https
+        apt: 
+          name: httpd
+          state: absent
+---

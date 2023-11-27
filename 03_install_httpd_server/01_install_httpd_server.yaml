@@ -1,0 +1,14 @@
+---
+-name: install and start httpd web server on all nodes
+ hosts: all
+ become: root
+ tasks:
+     -name: install httpd
+       apt:
+         name: httpd
+         state: present or Latest 
+     -name: Start httpd
+      service:
+          name: httpd
+          state: started
+---
