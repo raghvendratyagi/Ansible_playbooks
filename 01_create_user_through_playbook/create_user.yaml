@@ -1,0 +1,8 @@
+---
+-name: to work with user Management
+ hosts: all
+ tasks:
+    -name: to create a user
+     user: raghavtyagi
+     state: present
+---
